@@ -41,6 +41,8 @@ class FormDataEncoderTest {
         // When
         String result = formDataEncoder.encode(obj);
 
+        System.out.println(result);
+
         // Then
         assertThat(result).isEqualTo(
                 "str=This%20'is'%20%22test%22%20string." +
