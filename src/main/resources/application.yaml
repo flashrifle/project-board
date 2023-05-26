@@ -8,7 +8,7 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: trace
 
 spring:
-  profiles.active: prod
+  profiles.active: local
 
 ---
 
