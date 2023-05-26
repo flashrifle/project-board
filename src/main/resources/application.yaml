@@ -8,6 +8,12 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: trace
 
 spring:
+  profiles.active: local
+
+---
+
+spring:
+  config.activate.on-profile: local
   datasource:
     url: jdbc:mysql://localhost:3306/board
     username: Jaemin
