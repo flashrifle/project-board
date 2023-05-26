@@ -7,6 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.TestComponent;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
@@ -19,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @DisplayName("View 컨트롤러 - 인증")
 @Import(TestSecurityConfig.class)
-@WebMvcTest(Void.class)
+@WebMvcTest(AuthControllerTest.EmptyController.class)
 class AuthControllerTest {
 
     private final MockMvc mvc;
@@ -42,5 +43,8 @@ class AuthControllerTest {
         then(articleService).shouldHaveNoInteractions();
         then(paginationService).shouldHaveNoInteractions();
     }
+
+    @TestComponent
+    static class EmptyController {}
 
 }
