@@ -2,7 +2,6 @@ package com.project.board.controller;
 
 import com.project.board.domain.constant.FormStatus;
 import com.project.board.domain.constant.SearchType;
-import com.project.board.dto.UserAccountDto;
 import com.project.board.dto.request.ArticleRequest;
 import com.project.board.dto.response.ArticleResponse;
 import com.project.board.dto.response.ArticleWithCommentsResponse;
